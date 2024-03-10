@@ -48,6 +48,7 @@ function Counter() {
                   type="text"
                   placeholder="multiplier..."
                   className="form-control"
+                  value={multiplier}
                   onChange={e => setMultiplier(e.target.value)}
                 ></input>
               </div>
