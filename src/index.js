@@ -4,6 +4,7 @@ import Header from "./app/layout/Header";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
 import Counter from "./app/components/Counter";
+import DestinationList from "./app/components/DestinationList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,6 +12,11 @@ root.render(
     <Provider store={store}>
       <Header />
       <Counter />
+      <div className="p-4 border">
+        <h4 className="text-success text-center pb-2">Destination Lsit</h4>
+        <DestinationList/>
+
+      </div>
     </Provider>
   </div>
 );

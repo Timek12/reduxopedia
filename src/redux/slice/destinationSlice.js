@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = () => {
   return {
-    destination: [
+    destinations: [
       {
         name: "Hong-Kong",
         days: 7,
@@ -22,10 +22,10 @@ const initialState = () => {
   };
 };
 
-export const destinationSlice = createSlice( {
-    name: "destination",
-    initialState: initialState,
-    reducers: {
-        
-    }
-})
+export const destinationSlice = createSlice({
+  name: "destination",
+  initialState: initialState,
+  reducers: {},
+});
+
+export const destinationReducer = destinationSlice.reducer;
