@@ -14,7 +14,7 @@ const initialState = () => {
         fact: "Japan is mostly mountains.",
       },
       {
-        name: "Warsa",
+        name: "Warsaw",
         days: 21,
         fact: "The capital of Poland",
       },
