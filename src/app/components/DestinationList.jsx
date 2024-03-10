@@ -1,10 +1,13 @@
 import React from "react";
-import { UseSelector, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { destinationClicked } from "../../redux/slice/destinationSlice";
 
 function DestinationList() {
   const destinationList = useSelector(
     (state) => state.destinationStore.destinations
   );
+  const dispatch = useDispatch();
+
   return destinationList.map((destination, index) => {
     return (
       <div
@@ -16,7 +19,7 @@ function DestinationList() {
           {destination.name}
         </div>
         <div className="col-4 col-md-2">
-            <button className="btn btn-success form-control m-1">Details</button>
+            <button className="btn btn-success form-control m-1" onClick={() => dispatch(destinationClicked(destination))}>Details</button>
         </div>
       </div>
     );

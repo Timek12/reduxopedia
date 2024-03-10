@@ -19,13 +19,19 @@ const initialState = () => {
         fact: "The capital of Poland",
       },
     ],
+    destinationSelected: null,
   };
 };
 
 export const destinationSlice = createSlice({
   name: "destination",
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    destinationClicked: (state, action) => {
+        state.destinationSelected = action.payload;
+    }
+  },
 });
 
 export const destinationReducer = destinationSlice.reducer;
+export const {destinationClicked} = destinationSlice.actions;
